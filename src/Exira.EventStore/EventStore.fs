@@ -148,7 +148,7 @@ module EventStore =
                     | _ -> AllCheckpoint.AllStart
         }
 
-    /// Subscribes to a all events. Existing events from `lastPosition` onwards are read from the Event Store and presented to the user as if they had been pushed.
+    /// Subscribes to all events. Existing events from `lastPosition` onwards are read from the Event Store and presented to the user as if they had been pushed.
     /// Once the end of the stream is read the subscription is transparently (to the user) switched to push new events as they are written.
     /// The action `liveProcessingStarted` is called when the subscription switches from the reading phase to the live subscription phase.
     /// To receive all events in the database, use AllCheckpoint.AllStart. If events have already been received and resubscription from the same point is desired, use the position representing the last event processed which appeared on the subscription.
